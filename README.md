@@ -61,8 +61,9 @@ All eight selected runs completed with exit code 0:
 
 Each MP4 has a same-stem JSON. The JSONs were validated for `finite: true`,
 `video_shape: [9, 480, 720, 3]`, seed 42, the frozen generation settings, and peak reserved VRAM
-around 10.83 GiB. The MP4s were decoded locally and verified as 720×480, 8 fps, 9 frames,
-non-constant content. The detailed per-run report is
+around 10.83 GiB. All eight MP4s were decoded during validation and checked as 720×480, 8 fps,
+9 frames, non-constant content; a downloaded representative video was also decoded in the local
+delivery checkout. The detailed per-run report is
 [`artifacts/smoke/stage06_smoke_v1/RUN_REPORT.md`](artifacts/smoke/stage06_smoke_v1/RUN_REPORT.md).
 
 The two 3-record manifests are:

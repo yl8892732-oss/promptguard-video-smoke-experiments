@@ -35,16 +35,16 @@ Each row below is a separate `generate.py` process.
 
 ## Results
 
-| Run | Benchmark | Group | Prompt ID | MP4 bytes | JSON bytes | finite | pixel std | decoded frames | peak reserved GiB | routing layers |
-|---|---|---|---|---:|---:|---|---:|---:|---:|---:|
-| control dense | control | dense | `readme_prompt` | 8,500 | 3,273 | true | 0.089036 | 9 | 10.83 | 0 |
-| control promptguard | control | promptguard | `readme_prompt` | 27,662 | 78,458 | true | 0.104412 | 9 | 10.83 | 30 |
-| T2V consistent_attribute_binding | t2v_compbench | consistent_attribute_binding | `0001` | 207,253 | 78,728 | true | 0.357982 | 9 | 10.83 | 30 |
-| T2V spatial_relationships | t2v_compbench | spatial_relationships | `0001` | 291,798 | 78,505 | true | 0.292934 | 9 | 10.83 | 30 |
-| T2V action_binding | t2v_compbench | action_binding | `0001` | 259,015 | 78,615 | true | 0.308758 | 9 | 10.83 | 30 |
-| VBench multiple_objects | vbench | multiple_objects | `0076` | 110,964 | 79,515 | true | 0.263344 | 9 | 10.83 | 30 |
-| VBench human_action | vbench | human_action | `0158` | 128,120 | 78,434 | true | 0.281149 | 9 | 10.83 | 30 |
-| VBench spatial_relationship | vbench | spatial_relationship | `0863` | 137,437 | 78,533 | true | 0.292944 | 9 | 10.83 | 30 |
+| Run | Benchmark | Group | Prompt ID | MP4 bytes | finite | pixel std | decoded frames | peak reserved GiB | routing layers |
+|---|---|---|---|---:|---|---:|---:|---:|---:|
+| control dense | control | dense | `readme_prompt` | 8,500 | true | 0.089036 | 9 | 10.83 | 0 |
+| control promptguard | control | promptguard | `readme_prompt` | 27,662 | true | 0.104412 | 9 | 10.83 | 30 |
+| T2V consistent_attribute_binding | t2v_compbench | consistent_attribute_binding | `0001` | 207,253 | true | 0.357982 | 9 | 10.83 | 30 |
+| T2V spatial_relationships | t2v_compbench | spatial_relationships | `0001` | 291,798 | true | 0.292934 | 9 | 10.83 | 30 |
+| T2V action_binding | t2v_compbench | action_binding | `0001` | 259,015 | true | 0.308758 | 9 | 10.83 | 30 |
+| VBench multiple_objects | vbench | multiple_objects | `0076` | 110,964 | true | 0.263344 | 9 | 10.83 | 30 |
+| VBench human_action | vbench | human_action | `0158` | 128,120 | true | 0.281149 | 9 | 10.83 | 30 |
+| VBench spatial_relationship | vbench | spatial_relationship | `0863` | 137,437 | true | 0.292944 | 9 | 10.83 | 30 |
 
 All eight processes exited 0. All decoded MP4s are 720×480, 8 fps, 9 frames, with non-constant
 content. All JSONs have `finite: true`, `video_shape: [9, 480, 720, 3]`, and peak reserved VRAM
