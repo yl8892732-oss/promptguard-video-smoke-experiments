@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptguard-video"
+version = "0.1.0"
+description = "Training-free semantic-budget sparse attention for video diffusion"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.5", "numpy"]
+
+[project.optional-dependencies]
+cogvideox = ["diffusers==0.35.2", "transformers>=4.44,<5", "accelerate>=0.33", "sentencepiece", "protobuf>=3.20", "imageio-ffmpeg"]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["promptguard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

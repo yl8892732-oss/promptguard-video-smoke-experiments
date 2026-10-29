@@ -1,0 +1,169 @@
+{
+  "model": "model",
+  "mode": "dense",
+  "prompt": "A small red bird flies above a blue car.",
+  "config": {
+    "density": 0.4,
+    "alpha": 0.2,
+    "delta": 0.05,
+    "block_size": 256,
+    "warmup_steps": 1
+  },
+  "seed": 42,
+  "frames": 9,
+  "steps": 8,
+  "guidance": 6.0,
+  "resolution": [
+    720,
+    480
+  ],
+  "dtype": "float16",
+  "offload": "model",
+  "gpu": "NVIDIA A40",
+  "cuda_visible_devices": "0",
+  "vram_cap_gib": 23.0,
+  "peak_allocated_gib": 10.805423736572266,
+  "peak_reserved_gib": 10.830078125,
+  "elapsed_seconds": 53.033328855992295,
+  "inference_seconds": 41.48035315098241,
+  "video_shape": [
+    9,
+    480,
+    720,
+    3
+  ],
+  "pixel_std": 0.0890364944934845,
+  "finite": true,
+  "versions": {
+    "torch": "2.7.1+cu126",
+    "diffusers": "0.35.2",
+    "transformers": "4.57.0",
+    "python": "3.11.13"
+  },
+  "semantic_units": [
+    {
+      "label": "small red bird",
+      "spans": [
+        [
+          2,
+          16
+        ]
+      ],
+      "tokens": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "label": "blue car",
+      "spans": [
+        [
+          31,
+          39
+        ]
+      ],
+      "tokens": [
+        10,
+        11
+      ]
+    },
+    {
+      "label": "bird flies",
+      "spans": [
+        [
+          12,
+          16
+        ],
+        [
+          17,
+          22
+        ]
+      ],
+      "tokens": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "label": "bird above car",
+      "spans": [
+        [
+          12,
+          16
+        ],
+        [
+          23,
+          28
+        ],
+        [
+          36,
+          39
+        ]
+      ],
+      "tokens": [
+        3,
+        7,
+        11
+      ]
+    }
+  ],
+  "step_metrics": [
+    {
+      "step": 0,
+      "seconds": 33.58513562299777,
+      "allocated_gib": 3.471895217895508
+    },
+    {
+      "step": 1,
+      "seconds": 0.4471627229359001,
+      "allocated_gib": 3.472627639770508
+    },
+    {
+      "step": 2,
+      "seconds": 0.4463065409800038,
+      "allocated_gib": 3.471895217895508
+    },
+    {
+      "step": 3,
+      "seconds": 0.4467171790311113,
+      "allocated_gib": 3.472627639770508
+    },
+    {
+      "step": 4,
+      "seconds": 0.4475209240335971,
+      "allocated_gib": 3.471895217895508
+    },
+    {
+      "step": 5,
+      "seconds": 0.44640086602885276,
+      "allocated_gib": 3.472627639770508
+    },
+    {
+      "step": 6,
+      "seconds": 0.44455636292696,
+      "allocated_gib": 3.471895217895508
+    },
+    {
+      "step": 7,
+      "seconds": 0.4457494199741632,
+      "allocated_gib": 3.472627639770508
+    }
+  ],
+  "routing": {},
+  "benchmark": "control",
+  "group": "dense",
+  "prompt_id": "readme_prompt",
+  "run_kind": "control",
+  "model_id": "THUDM/CogVideoX-2b",
+  "model_revision": "1137dacfc2c9c012bed6a0793f4ecf2ca8e7ba01",
+  "model_path": "model",
+  "protocol_id": "stage05_smoke_v1",
+  "smoke_run_id": "stage06_smoke_v1",
+  "timestamp": "2026-10-28T15:38:24Z",
+  "run_started_at": "2026-10-28T15:37:14Z",
+  "run_finished_at": "2026-10-28T15:38:24Z",
+  "git_commit": null,
+  "code_version": "no-git; promptguard/core.py=08371701604e63ef, promptguard/cogvideox.py=e3220a364c82bd59, promptguard/semantics.py=4d0b67a1a0ffcd6b, scripts/generate.py=432aea67aa01c5a7"
+}

@@ -1,0 +1,51 @@
+# Python caches and build metadata
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+.conda/
+
+# Editors and OS metadata
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.token
+secrets*
+credentials*
+
+# Model weights and caches
+model/
+models/
+.hf/
+.cache/
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+*.pth
+
+# Local packaging, logs, and management files
+runpod_upload_stage05/
+*.zip
+*.pdf
+artifacts/**/logs/
+artifacts/test-tmp/
+handoff_documents/
+
+# Do not ignore the delivered smoke artifacts:
+# artifacts/manifests/, artifacts/environment/,
+# artifacts/sources/, artifacts/dry_runs/, and
+# artifacts/smoke/stage06_smoke_v1/**

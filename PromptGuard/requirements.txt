@@ -1,0 +1,10 @@
+torch==2.7.1
+diffusers==0.35.2
+transformers==4.57.0
+accelerate==1.15.0
+sentencepiece==0.2.2
+numpy==2.2.6
+pytest==9.1.1
+imageio==2.37.4
+imageio-ffmpeg==0.6.0
+protobuf>=3.20

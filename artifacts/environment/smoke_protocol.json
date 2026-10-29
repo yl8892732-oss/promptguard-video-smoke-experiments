@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "protocol_id": "stage05_smoke_v1",
+  "created_at": "2026-10-27T23:07:22+08:00",
+  "model": {
+    "id": "THUDM/CogVideoX-2b",
+    "revision": "1137dacfc2c9c012bed6a0793f4ecf2ca8e7ba01",
+    "local_dir": "model",
+    "dtype": "float16"
+  },
+  "runtime": {
+    "python": "3.11.17",
+    "torch": "2.7.1+cu126",
+    "cuda": "12.6",
+    "supported_compute_capabilities": [
+      "sm_50",
+      "sm_60",
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90"
+    ],
+    "recommended_compute_capabilities": ["sm_80", "sm_86", "sm_90"],
+    "incompatible_compute_capabilities": ["sm_89", "sm_120"]
+  },
+  "generation": {
+    "mode": "promptguard",
+    "seed": 42,
+    "steps": 8,
+    "frames": 9,
+    "resolution": [720, 480],
+    "height": 480,
+    "width": 720,
+    "guidance": 6.0,
+    "density": 0.4,
+    "alpha": 0.2,
+    "delta": 0.05,
+    "block_size": 256,
+    "warmup": 1,
+    "offload": "model",
+    "vram_gib": 23.0
+  },
+  "control": {
+    "prompt": "A small red bird flies above a blue car.",
+    "modes": ["dense", "promptguard"],
+    "seed": 42
+  },
+  "records": {
+    "t2v_compbench": [
+      {
+        "group": "consistent_attribute_binding",
+        "prompt_id": "0001"
+      },
+      {
+        "group": "spatial_relationships",
+        "prompt_id": "0001"
+      },
+      {
+        "group": "action_binding",
+        "prompt_id": "0001"
+      }
+    ],
+    "vbench": [
+      {
+        "group": ["multiple_objects"],
+        "prompt_id": "0076"
+      },
+      {
+        "group": ["human_action"],
+        "prompt_id": "0158"
+      },
+      {
+        "group": ["spatial_relationship"],
+        "prompt_id": "0863"
+      }
+    ]
+  },
+  "manifests": {
+    "t2v_compbench": {
+      "path": "artifacts/manifests/t2v_compbench_smoke.jsonl",
+      "sha256": "2b165e0b04c541e444def3863305424510d3fce11ded84ea29fe487a12d21bed"
+    },
+    "vbench": {
+      "path": "artifacts/manifests/vbench_smoke.jsonl",
+      "sha256": "4894029588ea3f73e6faee17bf2928df783851731eb09dd3895f47f5b8a61f7f"
+    }
+  },
+  "reporting": {
+    "generate_sidecar": "same-stem .json written by scripts/generate.py",
+    "required_stage6_metadata": [
+      "benchmark",
+      "group",
+      "prompt_id",
+      "model_revision",
+      "timestamp",
+      "code_version"
+    ],
+    "merge_policy": "The Stage 6 runner must merge plan provenance, pinned model revision, timestamp, and code version into the per-record JSON or RUN_REPORT; Stage 05 does not modify generate.py."
+  },
+  "run": {
+    "output_root": "artifacts/smoke/stage06_smoke_v1",
+    "layout": "artifacts/smoke/stage06_smoke_v1/<benchmark>/<group_or_dimension>/<prompt_id>.mp4|.json",
+    "one_process_per_record": true
+  }
+}
